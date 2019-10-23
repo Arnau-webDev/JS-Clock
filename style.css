@@ -1,0 +1,95 @@
+html {
+    background-image: url(img/time.jpg);
+    background-size: cover;
+    background-position: bottom;
+    font-family: 'helvetica neue';
+    text-align: center;
+    font-size: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+body {
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+}
+
+body::after {
+    content: "";
+    background: rgba(209, 94, 109, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.clock {
+    width: 30rem;
+    height: 30rem;
+    border: 10px solid white;
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+    box-shadow:
+        0 0 0 4px rgba(0, 0, 0, 0.1),
+        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 10px black,
+        0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.num {
+    font-size: 5rem;
+    color: white;
+    font-family: 'Lobster', cursive;
+}
+
+.num-3 {
+    position: absolute;
+    top: 41%;
+    right: 0;
+}
+
+.num-6 {
+    position: absolute;
+    bottom: -15px;
+    left: 44%;
+}
+
+.num-9 {
+    position: absolute;
+    top: 41%;
+    left: 0;
+}
+
+.num-12 {
+    position: absolute;
+    top: 0;
+    left: 44%;
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+    /* account for the height of the clock hands */
+}
+
+.hand {
+    width: 50%;
+    height: 6px;
+    background: rgb(209, 94, 109);
+    position: absolute;
+    top: 50%;
+    transform: rotate(90deg);
+    transform-origin: 100%;
+    transition: all 0.05s;
+    /* transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1); */
+}
